@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notif_channel">پخش صدا</string>
+    <string name="notif_running">در حال پخش صدا در شبکه</string>
+
+    <string name="nav_server">سرور</string>
+    <string name="nav_player">پلیر</string>
+    <string name="nav_settings">تنظیمات</string>
+
+    <string name="server_subtitle">صدای این گوشی را برای پلیرهای داخل شبکه بفرستید.</string>
+    <string name="server_start">شروع سرور</string>
+    <string name="server_stop">توقف سرور</string>
+    <string name="server_source">منبع</string>
+    <string name="server_mic">میکروفون</string>
+    <string name="server_phone_audio">صدای گوشی</string>
+    <string name="server_mic_hint">میکروفون این گوشی را برای پلیرهای متصل می‌فرستد.</string>
+    <string name="server_system_hint">اندروید ۱۰ به بالا. صدای موسیقی و ویدیوی برنامه‌هایی که اجازه می‌دهند ضبط می‌شود. صدای تماس قابل ضبط نیست.</string>
+    <string name="server_system_unsupported">صدای گوشی به اندروید ۱۰ یا جدیدتر نیاز دارد.</string>
+    <string name="server_level">سطح صدا</string>
+    <string name="server_addresses">آدرس‌های این گوشی</string>
+    <string name="server_no_addresses">هیچ اتصال شبکه‌ای پیدا نشد.</string>
+    <string name="server_pin">PIN %1$s</string>
+    <string name="server_players">پلیرهای متصل</string>
+    <string name="server_no_players">هنوز پلیری وصل نشده است.</string>
+    <string name="server_disconnect">قطع اتصال</string>
+    <string name="server_gain">تقویت صدا (Gain)</string>
+    <string name="server_gain_hint">صدای میکروفون ضعیف را بلندتر می‌کند. مقدار خیلی زیاد ممکن است صدا را خش‌دار کند.</string>
+    <string name="server_eq">اکولایزر</string>
+    <string name="eq_flat">بدون تغییر</string>
+    <string name="eq_voice">وضوح صدای گفتار</string>
+    <string name="eq_bass">تقویت بیس</string>
+    <string name="eq_treble">تقویت زیر</string>
+    <string name="noise_title">حذف نویز (Noise suppression)</string>
+    <string name="noise_hint">صداهای مزاحم مثل صدای کیبورد، فن و وزوز را حذف می‌کند. مصرف CPU را افزایش می‌دهد.</string>
+    <string name="noise_unavailable">این گوشی قابلیت داخلی حذف نویز ندارد.</string>
+
+    <string name="iface_wifi">Wi-Fi</string>
+    <string name="iface_usb">USB تترینگ</string>
+    <string name="iface_ethernet">اترنت</string>
+    <string name="iface_mobile">اینترنت همراه</string>
+    <string name="iface_other">سایر</string>
+
+    <string name="player_subtitle">صدا را از یک سرور دریافت و روی این گوشی پخش کنید.</string>
+    <string name="player_servers">سرورهای این شبکه</string>
+    <string name="player_searching">در حال جستجوی سرورها… مطمئن شوید سرور روشن است و در همین شبکه قرار دارد.</string>
+    <string name="player_connect">اتصال</string>
+    <string name="player_connecting">در حال اتصال…</string>
+    <string name="player_disconnect">قطع اتصال</string>
+    <string name="player_manual">اتصال با آدرس IP</string>
+    <string name="player_ip">آدرس IP</string>
+    <string name="player_pin">PIN (در صورت نیاز)</string>
+    <string name="player_scan">اسکن کد QR</string>
+    <string name="player_play_into">پخش در</string>
+    <string name="player_speaker">بلندگو</string>
+    <string name="player_virtual_mic">میکروفون مجازی</string>
+    <string name="player_vmic_note">اندروید اجازهٔ ساخت میکروفون مجازی را به برنامه‌ها نمی‌دهد، پس صدا از بلندگو یا هدفون پخش می‌شود.</string>
+    <string name="player_volume">بلندی صدا</string>
+    <string name="player_buffer">بافر</string>
+    <string name="player_buffer_hint">کمتر = تأخیر کمتر، بیشتر = قطعی کمتر روی Wi-Fi ضعیف.</string>
+    <string name="player_stats">تأخیر %1$d ms · بافر %2$d ms · گم‌شده %3$d</string>
+    <string name="player_pin_needed">این سرور PIN می‌خواهد. آن را وارد کنید و دوباره وصل شوید.</string>
+    <string name="player_bad_pin">PIN اشتباه است.</string>
+    <string name="player_lost">اتصال قطع شد.</string>
+
+    <string name="settings_device">این دستگاه</string>
+    <string name="settings_device_name">نام دستگاه</string>
+    <string name="settings_device_name_hint">به دستگاه‌های دیگر نمایش داده می‌شود. پیش‌فرض: %1$s</string>
+    <string name="settings_reset">بازگشت به پیش‌فرض</string>
+    <string name="settings_appearance">ظاهر</string>
+    <string name="settings_mode_system">سیستم</string>
+    <string name="settings_mode_light">روشن</string>
+    <string name="settings_mode_dark">تیره</string>
+    <string name="settings_light_themes">تم‌های روشن</string>
+    <string name="settings_dark_themes">تم‌های تیره</string>
+    <string name="settings_language">زبان</string>
+    <string name="settings_connection">اتصال</string>
+    <string name="settings_require_pin">نیاز به PIN برای اتصال</string>
+    <string name="settings_require_pin_hint">پلیرها باید قبل از شنیدن صدا این PIN را وارد کنند.</string>
+    <string name="settings_new_pin">PIN جدید</string>
+    <string name="settings_port">پورت</string>
+    <string name="settings_auto_reconnect">اتصال خودکار به آخرین سرور</string>
+    <string name="settings_android">اندروید</string>
+    <string name="settings_battery">اجازهٔ اجرا در پس‌زمینه</string>
+    <string name="settings_battery_hint">بعضی گوشی‌ها (شیائومی، ردمی، سامسونگ…) برنامه‌ها را در پس‌زمینه می‌بندند. اجازه دهید Echoport از بهینه‌سازی باتری مستثنی شود تا صدا قطع نشود.</string>
+    <string name="settings_keep_screen_on">روشن ماندن صفحه هنگام پخش</string>
+    <string name="settings_about">درباره</string>
+    <string name="settings_version">نسخه %1$s · پروتکل نسخه ۱</string>
+    <string name="settings_license">رایگان و متن‌باز تحت لایسنس GPL-3.0.</string>
+    <string name="settings_github">کد منبع در گیت‌هاب</string>
+</resources>

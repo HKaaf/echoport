@@ -1,0 +1,23 @@
+# Rust
+target/
+
+# Node
+node_modules/
+desktop/dist/
+
+# Tauri generated schemas
+desktop/src-tauri/gen/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.keystore
+*.jks
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
