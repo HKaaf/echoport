@@ -7,6 +7,7 @@ plugins {
 android {
     namespace = "io.github.hkaaf.echoport"
     compileSdk = 35
+    buildToolsVersion = "35.0.0"
 
     defaultConfig {
         applicationId = "io.github.hkaaf.echoport"
