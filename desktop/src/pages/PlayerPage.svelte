@@ -70,7 +70,7 @@
         <div style="font-weight: 600">{$t("vbcable.title")}</div>
         <div class="muted">{$t("vbcable.body")}</div>
       </div>
-      <button class="btn primary" onclick={() => openUrl(VB_CABLE_URL)}>{$t("vbcable.download")}</button>
+      <button class="btn primary" onclick={() => openUrl(VB_CABLE_URL).catch((e) => playerError.set(String(e)))}>{$t("vbcable.download")}</button>
     </div>
   {/if}
 
