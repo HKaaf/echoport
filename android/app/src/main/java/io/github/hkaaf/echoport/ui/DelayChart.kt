@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -45,6 +46,8 @@ private const val WINDOW_MS = 60_000f
 fun DelayChart(samples: List<DelaySample>) {
     val ep = LocalEp.current
     val measurer = rememberTextMeasurer()
+    // Canvas text does not inherit the theme font, so pass it on (Vazirmatn in Persian).
+    val family = MaterialTheme.typography.bodyMedium.fontFamily
     var touchX by remember { mutableStateOf<Float?>(null) }
 
     val last = samples.lastOrNull()
@@ -94,7 +97,7 @@ fun DelayChart(samples: List<DelaySample>) {
             val yMax = (ceil(peak * 1.1 / step) * step).toFloat()
             fun x(t: Long) = left + w * (1 - (now - t) / WINDOW_MS)
             fun y(ms: Int) = top + h * (1 - ms / yMax)
-            val axis = TextStyle(color = ep.muted, fontSize = 10.sp)
+            val axis = TextStyle(color = ep.muted, fontSize = 10.sp, fontFamily = family)
 
             for (f in listOf(0f, 0.25f, 0.5f, 0.75f, 1f)) {
                 val v = (yMax * f).toInt()
@@ -129,7 +132,7 @@ fun DelayChart(samples: List<DelaySample>) {
                 drawCircle(ep.accent, radius = 5.dp.toPx(), center = Offset(sx, sy))
                 val secs = ((now - s.timeMs) / 1000).toInt()
                 val tip = measurer.measure("${s.delayMs} ms · ${if (secs == 0) nowLabel else agoFormat.format(secs)}",
-                    TextStyle(color = ep.text, fontSize = 12.sp, fontWeight = FontWeight.SemiBold))
+                    TextStyle(color = ep.text, fontSize = 12.sp, fontWeight = FontWeight.SemiBold, fontFamily = family))
                 val pad = 6.dp.toPx()
                 val bx = (sx - tip.size.width / 2f).coerceIn(left, left + w - tip.size.width - 2 * pad)
                 val by = (sy - tip.size.height - 3 * pad).coerceAtLeast(0f)

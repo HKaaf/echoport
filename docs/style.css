@@ -1,5 +1,14 @@
 /* Echoport website. Plain CSS, no build step, no external requests. */
 
+/* Vazirmatn (OFL, see fonts/OFL.txt) for Persian text only; English keeps the system font. */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F;
+}
+
 :root {
   /* Brand (fixed): dark blue + dark purple. */
   --brand-blue: #1b2a6b;
@@ -61,7 +70,7 @@
 
   --radius: 1rem;
   --max: 72rem;
-  --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, Tahoma, sans-serif;
+  --font: "Vazirmatn", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, Tahoma, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }

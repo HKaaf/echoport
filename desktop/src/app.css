@@ -1,3 +1,13 @@
+/* Vazirmatn (OFL, see assets/fonts/OFL.txt) for Persian text. The unicode-range limits it to
+   Arabic-script characters (plus ZWNJ), so English keeps the system font. */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("./assets/fonts/Vazirmatn-wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F;
+}
+
 :root {
   --bg: #0b1020;
   --surface: #121a33;
@@ -9,7 +19,7 @@
   --onAccent: #0b1020;
   --border: #26304f;
   --radius: 14px;
-  font-family: "Segoe UI Variable Text", "Segoe UI", Tahoma, system-ui, sans-serif;
+  font-family: "Vazirmatn", "Segoe UI Variable Text", "Segoe UI", Tahoma, system-ui, sans-serif;
   font-size: 14px;
   color: var(--text);
   background: var(--bg);
@@ -77,7 +87,7 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   padding: 12px 14px; border-radius: 12px; background: var(--surface2);
 }
-.mono { font-family: "Cascadia Mono", Consolas, monospace; }
+.mono { font-family: "Cascadia Mono", Consolas, "Vazirmatn", monospace; }
 .error { color: #e5484d; font-size: 13px; }
 .banner {
   display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;

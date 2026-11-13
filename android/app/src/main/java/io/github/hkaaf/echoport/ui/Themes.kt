@@ -1,6 +1,12 @@
 package io.github.hkaaf.echoport.ui
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import io.github.hkaaf.echoport.R
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -55,8 +61,29 @@ fun themeById(id: String) = THEMES.firstOrNull { it.id == id } ?: THEMES[0]
 
 val LocalEp = staticCompositionLocalOf { THEMES[0] }
 
+/** Vazirmatn (OFL, see assets/licenses/vazirmatn-OFL.txt) for the Persian UI. */
+private val Vazirmatn = FontFamily(
+    Font(R.font.vazirmatn_regular, FontWeight.Normal),
+    Font(R.font.vazirmatn_medium, FontWeight.Medium),
+    Font(R.font.vazirmatn_semibold, FontWeight.SemiBold),
+    Font(R.font.vazirmatn_bold, FontWeight.Bold),
+)
+
+private fun Typography.withFamily(family: FontFamily) = Typography(
+    displayLarge = displayLarge.copy(fontFamily = family), displayMedium = displayMedium.copy(fontFamily = family),
+    displaySmall = displaySmall.copy(fontFamily = family), headlineLarge = headlineLarge.copy(fontFamily = family),
+    headlineMedium = headlineMedium.copy(fontFamily = family), headlineSmall = headlineSmall.copy(fontFamily = family),
+    titleLarge = titleLarge.copy(fontFamily = family), titleMedium = titleMedium.copy(fontFamily = family),
+    titleSmall = titleSmall.copy(fontFamily = family), bodyLarge = bodyLarge.copy(fontFamily = family),
+    bodyMedium = bodyMedium.copy(fontFamily = family), bodySmall = bodySmall.copy(fontFamily = family),
+    labelLarge = labelLarge.copy(fontFamily = family), labelMedium = labelMedium.copy(fontFamily = family),
+    labelSmall = labelSmall.copy(fontFamily = family),
+)
+
 @Composable
 fun EchoportTheme(theme: EpTheme, content: @Composable () -> Unit) {
+    val persian = LocalConfiguration.current.locales[0].language == "fa"
+    val typography = if (persian) Typography().withFamily(Vazirmatn) else Typography()
     val base = if (theme.dark) darkColorScheme() else lightColorScheme()
     val scheme = base.copy(
         primary = theme.accent, onPrimary = theme.onAccent,
@@ -68,6 +95,6 @@ fun EchoportTheme(theme: EpTheme, content: @Composable () -> Unit) {
         outline = theme.border, outlineVariant = theme.border,
     )
     CompositionLocalProvider(LocalEp provides theme) {
-        MaterialTheme(colorScheme = scheme, content = content)
+        MaterialTheme(colorScheme = scheme, typography = typography, content = content)
     }
 }
