@@ -53,6 +53,8 @@ So you can, for example:
 
 ## Install
 
+Website: **https://hkaaf.github.io/echoport/**
+
 Download the latest Windows installer and Android APK from
 [Releases](https://github.com/HKaaf/echoport/releases).
 

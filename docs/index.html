@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Echoport – share microphones and speakers over your network</title>
+  <meta name="description" content="Free, open-source app that turns your phone into a wireless microphone or speaker for your PC, and back. Windows and Android, no time limits.">
+  <meta property="og:title" content="Echoport">
+  <meta property="og:description" content="Share microphones and speakers between your devices over the local network. Free and open source.">
+  <meta property="og:image" content="https://hkaaf.github.io/echoport/icon.png">
+  <meta name="theme-color" content="#1b2a6b">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="alternate" hreflang="fa" href="fa.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="site-logo" href="./"><img src="icon.svg" alt="" width="32" height="32">Echoport</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="https://github.com/HKaaf/echoport">GitHub</a></li>
+          <li><a href="fa.html" lang="fa" hreflang="fa">فارسی</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Your phone, your PC, <span>one sound system.</span></h1>
+          <p class="lead">Echoport shares microphones and speakers between your devices over Wi-Fi or USB tethering. Use your phone as a wireless mic for Discord and Zoom, or listen to your PC through your phone's headphones.</p>
+          <div class="actions">
+            <a class="btn primary" href="#download">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              Download free
+            </a>
+            <a class="btn" href="https://github.com/HKaaf/echoport">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/></svg>
+              View the source
+            </a>
+          </div>
+          <p class="hero-note muted">Free and open source under GPL-3.0 · No account · No time limits · Windows 10/11 and Android 8+</p>
+        </div>
+
+        <svg class="hero-art" viewBox="0 0 520 340" role="img" aria-label="A phone streaming sound over the network to a laptop">
+          <defs>
+            <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1b2a6b"/>
+              <stop offset="1" stop-color="#4a2380"/>
+            </linearGradient>
+          </defs>
+          <!-- Laptop -->
+          <rect x="230" y="70" width="260" height="170" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="3"/>
+          <rect x="246" y="86" width="228" height="138" rx="6" fill="url(#brand)"/>
+          <path d="M200 252h320l-18 22H218z" fill="var(--surface2)" stroke="var(--border)" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="332" cy="155" r="13" fill="#fff"/>
+          <path d="M360 128a38 38 0 0 1 0 54" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+          <path d="M384 108a66 66 0 0 1 0 94" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="9" stroke-linecap="round"/>
+          <!-- Phone -->
+          <rect x="30" y="96" width="110" height="200" rx="20" fill="var(--surface)" stroke="var(--border)" stroke-width="3"/>
+          <rect x="42" y="116" width="86" height="160" rx="8" fill="var(--surface2)"/>
+          <rect x="72" y="150" width="26" height="46" rx="13" fill="none" stroke="var(--accent)" stroke-width="5"/>
+          <path d="M64 186a21 21 0 0 0 42 0M85 207v14" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+          <!-- Waves between -->
+          <path d="M156 170c14-14 28-14 42 0s28 14 42 0" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M156 196c14-14 28-14 42 0s28 14 42 0" fill="none" stroke="var(--accent)" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <section id="uses" aria-labelledby="uses-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Two roles on every device</p>
+          <h2 id="uses-title">Send from one, play on another</h2>
+          <p class="lead">A <strong>server</strong> sends its microphone or whatever it's playing. A <strong>player</strong> plays that into its speakers or into a virtual microphone other apps can use.</p>
+        </div>
+        <div class="grid">
+          <article class="card reveal">
+            <p class="route">Phone mic <span class="arrow" aria-hidden="true">→</span><span class="visually-hidden">to</span> PC virtual mic</p>
+            <p>A wireless microphone for Discord, Zoom, Teams or OBS.</p>
+          </article>
+          <article class="card reveal">
+            <p class="route">PC audio <span class="arrow" aria-hidden="true">→</span><span class="visually-hidden">to</span> phone speaker</p>
+            <p>Hear your computer on headphones plugged into your phone.</p>
+          </article>
+          <article class="card reveal">
+            <p class="route">Phone mic <span class="arrow" aria-hidden="true">→</span><span class="visually-hidden">to</span> PC speakers</p>
+            <p>A quick baby monitor or room-to-room intercom.</p>
+          </article>
+          <article class="card reveal">
+            <p class="route">PC audio <span class="arrow" aria-hidden="true">→</span><span class="visually-hidden">to</span> another PC's mic</p>
+            <p>Play music or sound effects straight into a call.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2 id="features-title">Everything included, nothing locked</h2>
+        </div>
+        <div class="grid">
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>No time limit</h3>
+            <p>Stay connected for as long as you like. No hourly disconnects, no subscription.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+            <h3>Mic boost up to 400%</h3>
+            <p>Make a quiet microphone loud enough, with a soft limiter so it doesn't crackle.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3l3-7 4 14 3-7h5"/></svg></div>
+            <h3>Noise suppression</h3>
+            <p>Removes keyboard clicks, fans and hum. Equalizer presets for clearer voice or more bass.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/><path d="M2 9a15 15 0 0 1 20 0"/></svg></div>
+            <h3>Finds devices on its own</h3>
+            <p>Devices on the same Wi-Fi or USB tether show up automatically. Or scan a QR code.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-6 4 4 4-7 5 9"/><path d="M3 21h18"/></svg></div>
+            <h3>Low, visible delay</h3>
+            <p>A live chart shows the delay. Tune the buffer for less lag or fewer dropouts.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <h3>Private by design</h3>
+            <p>Audio never leaves your network. Add a PIN so only your own devices can listen.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M15 20a4 4 0 0 1 6-3.5"/></svg></div>
+            <h3>Many listeners</h3>
+            <p>Several players can listen to one server at the same time. Record what you hear to WAV.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+            <h3>14 themes, two languages</h3>
+            <p>Light and dark themes that follow your system. English and Persian with right-to-left layout.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Connected in three steps</h2>
+        </div>
+        <ol class="steps">
+          <li class="card reveal">
+            <h3>Install on both devices</h3>
+            <p>Windows installer or Android APK. For a virtual microphone on Windows, also install the free <a href="https://vb-audio.com/Cable/">VB-Cable</a> driver once.</p>
+          </li>
+          <li class="card reveal">
+            <h3>Start a server</h3>
+            <p>Pick the microphone or system audio and press <strong>Start server</strong>. Every network address of the device is listed, plus a QR code.</p>
+          </li>
+          <li class="card reveal">
+            <h3>Connect a player</h3>
+            <p>On the other device, pick the server from the list, scan the QR code or type its IP, and choose speakers or virtual mic.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="platforms" aria-labelledby="platforms-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Platforms</p>
+          <h2 id="platforms-title">What works where</h2>
+        </div>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="platforms-title">
+          <table>
+            <thead>
+              <tr><th scope="col">Device</th><th scope="col">Send mic</th><th scope="col">Send system audio</th><th scope="col">Play on speakers</th><th scope="col">Play into virtual mic</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Windows 10 / 11</th><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes, with VB-Cable</td></tr>
+              <tr><th scope="row">Android 8+</th><td class="yes">Yes</td><td class="yes">Android 10+</td><td class="yes">Yes</td><td class="no">Not allowed by Android</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" aria-labelledby="download-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Download</p>
+          <h2 id="download-title">Get Echoport</h2>
+          <p class="lead">Always the latest version, built automatically from the source on GitHub.</p>
+        </div>
+        <div class="download-grid">
+          <article class="card download-card reveal">
+            <h3>Windows 10 / 11</h3>
+            <a class="btn primary" href="https://github.com/HKaaf/echoport/releases/latest/download/Echoport-Windows-x64-setup.exe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              <span>Download for Windows<small>Installer · 64-bit · about 3 MB</small></span>
+            </a>
+            <ul>
+              <li>The installer isn't code-signed yet: if SmartScreen warns you, choose <em>More info → Run anyway</em>.</li>
+              <li>For the virtual microphone, install <a href="https://vb-audio.com/Cable/">VB-Cable</a> (free).</li>
+            </ul>
+          </article>
+          <article class="card download-card reveal">
+            <h3>Android 8+</h3>
+            <a class="btn primary" href="https://github.com/HKaaf/echoport/releases/latest/download/Echoport-Android.apk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              <span>Download for Android<small>APK · about 2 MB</small></span>
+            </a>
+            <ul>
+              <li>Allow installing apps from your browser or file manager when asked.</li>
+              <li>On Xiaomi, Redmi or Samsung phones, open <em>Settings → Allow running in the background</em> in Echoport so audio doesn't stop.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="muted" style="margin-block-start: 1.5rem">Older versions and release notes: <a href="https://github.com/HKaaf/echoport/releases">all releases</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Echoport is free software under the <a href="https://github.com/HKaaf/echoport/blob/main/LICENSE">GPL-3.0</a> license.</p>
+      <p><a href="https://github.com/HKaaf/echoport/blob/main/PROTOCOL.md">Protocol</a> · <a href="https://github.com/HKaaf/echoport/issues">Report a bug</a> · <a href="fa.html" lang="fa" hreflang="fa">فارسی</a></p>
+    </div>
+  </footer>
+</body>
+</html>
