@@ -58,7 +58,18 @@
     <string name="player_volume">Volume</string>
     <string name="player_buffer">Buffer</string>
     <string name="player_buffer_hint">Lower = less delay, higher = fewer dropouts on weak Wi-Fi.</string>
-    <string name="player_stats">Latency %1$d ms · buffered %2$d ms · lost %3$d</string>
+    <string name="delay_title">Delay</string>
+    <string name="delay_current">Delay now</string>
+    <string name="delay_average">Average</string>
+    <string name="delay_max">Highest</string>
+    <string name="delay_ping">Network ping</string>
+    <string name="delay_buffer">Buffer</string>
+    <string name="delay_now">now</string>
+    <string name="delay_ago">%1$d s ago</string>
+    <string name="delay_lost">Lost packets: %1$d</string>
+    <string name="delay_empty">Waiting for audio…</string>
+    <string name="delay_aria">Delay over the last minute: now %1$d ms, average %2$d ms, highest %3$d ms</string>
+    <string name="delay_hint">Estimated time from the server to this phone: half the network ping + the buffer + one 5 ms audio frame. The phone\'s audio output adds a little more. Lower the buffer for less delay; raise it if the sound cuts out. Touch the chart to read a point.</string>
     <string name="player_pin_needed">This server needs a PIN. Enter it and connect again.</string>
     <string name="player_bad_pin">Wrong PIN.</string>
     <string name="player_lost">Connection lost.</string>

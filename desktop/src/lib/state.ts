@@ -9,6 +9,33 @@ export const status = writable<Status>({ serverRunning: false, serverLevelDb: -9
 export const playerError = writable<string>("");
 export const serverError = writable<string>("");
 
+/** One point of the player's delay chart. */
+export interface DelaySample { t: number; delayMs: number; rttMs: number; bufferMs: number }
+
+/** Audio frame length; every sample waits this long before it can be sent. */
+const FRAME_MS = 5;
+/** Status is polled every 500 ms, so 120 samples cover the last minute. */
+const HISTORY = 120;
+
+export const delayHistory = writable<DelaySample[]>([]);
+
+// Estimated mouth-to-ear delay: one-way network time (half the ping) + jitter buffer + one frame.
+// The sound card adds a little on top, which the app can't measure.
+status.subscribe((s) => {
+  const p = s.player;
+  if (!p?.connected) {
+    if (get(delayHistory).length) delayHistory.set([]);
+    return;
+  }
+  const sample = {
+    t: Date.now(),
+    rttMs: p.rttMs,
+    bufferMs: p.bufferedMs,
+    delayMs: Math.round(p.rttMs / 2 + p.bufferedMs + FRAME_MS),
+  };
+  delayHistory.update((h) => [...h, sample].slice(-HISTORY));
+});
+
 export function deviceName(): string {
   return current().deviceName.trim() || get(info).defaultName;
 }

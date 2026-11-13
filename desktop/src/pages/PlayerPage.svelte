@@ -4,7 +4,8 @@
   import { api, type Destination, type Discovered } from "../lib/api";
   import { settings, update } from "../lib/settings";
   import { t } from "../lib/i18n";
-  import { status, devices, playerError, connectTo, disconnect } from "../lib/state";
+  import DelayChart from "../components/DelayChart.svelte";
+  import { status, devices, playerError, delayHistory, connectTo, disconnect } from "../lib/state";
 
   const VB_CABLE_URL = "https://vb-audio.com/Cable/";
 
@@ -108,10 +109,17 @@
       </button>
     </form>
     {#if errorText}<p class="error">{errorText}</p>{/if}
-    {#if $status.player?.connected}
-      <p class="muted">{$t("player.stats", { rtt: $status.player.rttMs, buf: $status.player.bufferedMs, lost: $status.player.lost })}</p>
-    {/if}
   </section>
+
+  {#if $status.player?.connected}
+    <section class="card">
+      <div class="row between">
+        <h2>{$t("delay.title")}</h2>
+        <span class="muted">{$t("delay.lost", { lost: $status.player.lost })}</span>
+      </div>
+      <DelayChart samples={$delayHistory} />
+    </section>
+  {/if}
 
   <div class="grid">
     <section class="card">

@@ -1,6 +1,7 @@
 package io.github.hkaaf.echoport.ui
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -97,8 +98,15 @@ fun PlayerScreen(hub: HubState, s: AppSettings) {
             else -> hub.playerError
         }
         if (error.isNotEmpty()) Hint(error, Color(0xFFE5484D))
-        hub.player?.takeIf { it.connected }?.let {
-            Hint(stringResource(R.string.player_stats, it.rttMs, it.bufferedMs, it.lost.toInt()))
+    }
+
+    hub.player?.takeIf { it.connected }?.let { p ->
+        EpCard {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.weight(1f)) { SectionTitle(stringResource(R.string.delay_title)) }
+                Hint(stringResource(R.string.delay_lost, p.lost.toInt()))
+            }
+            DelayChart(hub.delayHistory)
         }
     }
 

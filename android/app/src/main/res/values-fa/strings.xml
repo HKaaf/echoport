@@ -57,7 +57,18 @@
     <string name="player_volume">بلندی صدا</string>
     <string name="player_buffer">بافر</string>
     <string name="player_buffer_hint">کمتر = تأخیر کمتر، بیشتر = قطعی کمتر روی Wi-Fi ضعیف.</string>
-    <string name="player_stats">تأخیر %1$d ms · بافر %2$d ms · گم‌شده %3$d</string>
+    <string name="delay_title">تأخیر</string>
+    <string name="delay_current">تأخیر فعلی</string>
+    <string name="delay_average">میانگین</string>
+    <string name="delay_max">بیشترین</string>
+    <string name="delay_ping">پینگ شبکه</string>
+    <string name="delay_buffer">بافر</string>
+    <string name="delay_now">اکنون</string>
+    <string name="delay_ago">%1$d ثانیه پیش</string>
+    <string name="delay_lost">بسته‌های گم‌شده: %1$d</string>
+    <string name="delay_empty">در انتظار صدا…</string>
+    <string name="delay_aria">تأخیر در یک دقیقهٔ اخیر: اکنون %1$d ms، میانگین %2$d ms، بیشترین %3$d ms</string>
+    <string name="delay_hint">زمان تخمینی رسیدن صدا از سرور به این گوشی: نصف پینگ شبکه + بافر + یک فریم ۵ میلی‌ثانیه‌ای. خروجی صدای گوشی هم کمی اضافه می‌کند. برای تأخیر کمتر بافر را کم کنید و اگر صدا قطع می‌شود، آن را بیشتر کنید. برای دیدن مقدار هر لحظه، نمودار را لمس کنید.</string>
     <string name="player_pin_needed">این سرور PIN می‌خواهد. آن را وارد کنید و دوباره وصل شوید.</string>
     <string name="player_bad_pin">PIN اشتباه است.</string>
     <string name="player_lost">اتصال قطع شد.</string>

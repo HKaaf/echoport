@@ -19,7 +19,15 @@ data class HubState(
     val serverError: String = "",
     /** A protocol error code (pin_required, bad_pin, ...), "lost", or a message. */
     val playerError: String = "",
+    /** The player's delay over the last minute, oldest first. */
+    val delayHistory: List<DelaySample> = emptyList(),
 )
+
+/** One point of the delay chart; same estimate as the desktop app. */
+data class DelaySample(val timeMs: Long, val delayMs: Int, val rttMs: Int, val bufferMs: Int)
+
+/** Status ticks every 500 ms, so 120 samples cover the last minute. */
+private const val DELAY_HISTORY = 120
 
 /**
  * Process-wide owner of the server and player. The UI calls into it; the foreground
@@ -162,11 +170,19 @@ object Hub {
             override fun run() {
                 val srv = server
                 val ply = player
+                val status = ply?.status()
+                // Estimated delay: one-way network time (half the ping) + jitter buffer + one frame.
+                val history = if (status?.connected == true) {
+                    val sample = DelaySample(Proto.nowMs(), status.rttMs / 2 + status.bufferedMs + Proto.FRAME_MS,
+                        status.rttMs, status.bufferedMs)
+                    (_state.value.delayHistory + sample).takeLast(DELAY_HISTORY)
+                } else emptyList()
                 _state.value = _state.value.copy(
                     serverRunning = srv != null,
                     levelDb = srv?.levelDb ?: -96f,
                     peers = srv?.peers() ?: emptyList(),
-                    player = ply?.status(),
+                    player = status,
+                    delayHistory = history,
                 )
                 if (srv != null || ply != null) main.postDelayed(this, 500) else ticking = false
             }
